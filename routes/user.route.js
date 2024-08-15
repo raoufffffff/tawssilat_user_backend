@@ -47,6 +47,11 @@ UserRoute.post('/', async (req, res) => {
     body.cancelOrders = 0
     body.orders = 0
     try {
+        const myusers = await User.findOne({ email: req.body.email })
+        if (myusers) {
+            res.send({ good: false, message: `${req.body.email} already exists` })
+            return
+        }
         const myuser = await User.create(body)
         res.send({ good: true, result: myuser })
     } catch (error) {
