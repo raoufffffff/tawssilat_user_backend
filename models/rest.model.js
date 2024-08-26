@@ -67,14 +67,7 @@ const restSchema = new mongoose.Schema({
         type: [String], // Specify that menu is an array of strings
         default: [] // Initialize with an empty array
     },
-    resFiv: {
-        type: [String], // Specify that menu is an array of strings
-        default: [] // Initialize with an empty array
-    },
-    foodFiv: {
-        type: [String], // Specify that menu is an array of strings
-        default: [] // Initialize with an empty array
-    }
+
 });
 
 // Create an index on email for faster lookups

@@ -9,6 +9,14 @@ const user = new mongoose.Schema({
     cancelOrders: Number,
     orders: Number,
     city: String,
+    resFiv: {
+        type: [String], // Specify that menu is an array of strings
+        default: [] // Initialize with an empty array
+    },
+    foodFiv: {
+        type: [String], // Specify that menu is an array of strings
+        default: [] // Initialize with an empty array
+    }
 })
 
 
