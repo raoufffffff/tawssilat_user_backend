@@ -6,6 +6,7 @@ const UserRoute = require('./routes/user.route');
 const AuthRoute = require('./auth/Auth');
 const foodRoute = require('./routes/food.route');
 const RestRoute = require('./routes/rest.route');
+const OrderRoute = require('./routes/order.route');
 require('dotenv').config()
 const app = express()
 
@@ -17,7 +18,7 @@ app.use('/user', UserRoute)
 app.use('/auth', AuthRoute)
 app.use('/food', foodRoute)
 app.use('/rest', RestRoute)
-
+app.use('/order', OrderRoute)
 
 
 app.get('/', (req, res) => {
